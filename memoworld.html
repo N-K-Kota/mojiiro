@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>塗り絵で遊ぼう</title>
+  <link href="css/memoworld.css" rel="stylesheet">
+</head>
+<body>
+<header>
+  <h1>もじもじ色ワールド</h1>
+</header>
+<div class="wrapper">
+  <main id="layerwrapper" class="mainitem">
+      <canvas id="canvas1" class="layer" width="1800" height="900">
+      </canvas>
+      <canvas id="shuchucanvas" class="layer" width="1800" height="900">
+      </canvas>
+      <!--<canvas id="dropcanv" class="layer" width="1800" height="900"></canvas>-->
+      <canvas id="ranarc" class="layer" width="1800" height="900"></canvas>
+      <canvas id="dousinen" class="layer" width="1800" height="900"></canvas>
+      <canvas id="textcanv" class="layer" width="1800" height="900"></canvas>
+      <canvas id="subtextcanv" class="layer" width="1800" height="900"></canvas>
+      <canvas id="thirdtextcanv" class="layer" width="1800" height="900"></canvas>
+      <canvas id="linecanv" class="layer" width="1800" height="900"></canvas>
+      <canvas id="gradientcanv" class="layer" width="1800" height="900"></canvas>
+      <canvas id="zukei" class="layer" width="1800" height="900"></canvas>
+      <canvas id="range" class="layer" width="1800" height="900"></canvas>
+      <canvas id="wavecanv" class="layer" width="1800" height="900"></canvas>
+      <canvas id="springcanv" class="layer" width="1800" height="900"></canvas>
+      <canvas id="photocanv" class="layer" width="1800" heigth="900"></canvas>
+
+  </main>
+  <aside id="toolbox" class="side1">
+      <button id="domask">マスク発動</button>
+      <button id="screenbtn">スクリーン</button>
+      <input type="file" id="file" accept="image/*" value="アップロード">
+      <section class="paintzone underbar">
+        <button id="ranarcbtn">丸描いてぽん</button>
+        <button id="primebtn">原色</button>
+        <button id="dropbtn">水滴ランデブー</button>
+        <button id="springbtn">プシャー</button>
+        <button id="cleararc">マルケし</button>
+      </section>
+
+    <section class="figurezone underbar">
+      <button id="zukeibtn"　class="sidebtn">四角</button>
+      <button id="circlebtn">丸</button>
+      <button id="trianglebtn">三角</button>
+
+    </section>
+    <button id="lineargradientbtn">グラデーション</button>
+    <button id="wavebtn">波うち</button>
+
+    <section class="autofigure underbar">
+      <button id="shuchubtn1" name="shuchu1">集中線</button><button id="clearshuchu">集中線けし</button>
+      <div class="hide"><label>外径<input type="number" id="shuchur1" value="200"></label><br>
+      <label>内径<input type="number" id="shuchuinr1" step="0.01" min="0" max="1" value="0.1"></label></div>
+      <button id="dousinbtn">同心円</button>
+      <button id="clearen">円けし</button><br>
+      <button id="linebtn">線描き</button>
+      <button id="clearline">線消し</button><br>
+    </section>
+
+
+      <button id="readimg">ダウンロード</button>
+
+  </aside>
+
+  <aside id="tools" class="side2">
+    <section class="textzone underbar">
+      <input type="text" id="text">
+      <label>x:<input type="number" id="tx" min="0" max="1800"　value="0"></label>
+      <label>y:<input type="number" id="ty" min="0" max="900"  value="200"></label>
+      <label>size<input type="number" id="tsize" min="1" max="800"  value="100"></label><br>
+      <input type="text" id="stext">
+      <label>x:<input type="number" id="stx" min="0" max="1800"　value="0"></label>
+      <label>y:<input type="number" id="sty" min="0" max="900"  value="550"></label>
+      <label>size<input type="number" id="stsize" min="1" max="800"  value="500"></label><br>
+      <input type="text" id="ttext">
+      <label>x:<input type="number" id="ttx" min="0" max="1800" value="0"></label>
+      <label>y:<input type="number" id="tty" min="0" max="900" value="700"></label>
+      <label>size<input type="number" id="ttsize" min="1" max="800" value="100"></label><br>
+    </section>
+    <button id="pen">ペン</button>
+    <input type="color" id="colorpicker">
+    <button id="clear" onclick="clear();">消去</button>
+    <button id="eraser">消しゴム</button>
+    <button id="insertimg">画像読み込み</button>
+  </aside>
+
+</div>
+<div id="load"></div>
+<script src="script/classes.js"></script>
+<script src="script/memoworld.js?a=1"></script>
+</body>
+</html>
